@@ -209,10 +209,10 @@
         
         <div class="footer">
             <div class="footer-links">
-                <a href="#privacy-policy">Privacy Policy</a>
-                <a href="#terms-of-service">Terms of Service</a>
-                <a href="#data-security">Data Security</a>
-                <a href="#contact">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="data-security.html">Data Security</a>
+                <a href="mailto:spreadsheetdistillery@gmail.com">Contact</a>
             </div>
             <p style="color: #999; font-size: 0.8em;">
                 © 2025 Spreadsheet Distillery. Professional business analysis services.
@@ -225,34 +225,5 @@
         <!-- Privacy Policy content would go here -->
     </div>
     
-    <script>
-        // Simple modal functionality for policy links
-        document.addEventListener('DOMContentLoaded', function() {
-            const policyLinks = document.querySelectorAll('.footer-links a[href^="#"]');
-            
-            policyLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const policy = this.getAttribute('href').substring(1);
-                    
-                    // For now, just alert - you'll replace this with actual modal content
-                    switch(policy) {
-                        case 'privacy-policy':
-                            alert('Privacy Policy modal would open here. Create a separate HTML page or modal.');
-                            break;
-                        case 'terms-of-service':
-                            alert('Terms of Service modal would open here. Create a separate HTML page or modal.');
-                            break;
-                        case 'data-security':
-                            alert('Data Security Policy modal would open here. Create a separate HTML page or modal.');
-                            break;
-                        case 'contact':
-                            window.location.href = 'mailto:spreadsheetdistillery@gmail.com';
-                            break;
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
