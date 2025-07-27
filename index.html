@@ -1,95 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Spreadsheet Insights – No Meetings Required</title>
-  <meta name="google-site-verification" content="AkbHzkBLBioLsWfVPYy2pxylaUVFfh3q3ojqjv8nn6g" />
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 2rem;
-      background-color: #f9f9f9;
-      color: #333;
-      border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2rem;
-    }
-
-    header img {
-      width: 50px;
-      height: 50px;
-      margin-right: 1rem;
-      border-radius: 8px;
-    }
-
-    h1 {
-      font-size: 1.9em;
-      margin: 0;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0;
-    }
-
-    ul li {
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-    }
-
-    button {
-      background: #000;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-
-    button:hover {
-      background: #333;
-    }
-
-    p {
-      font-size: 1.05rem;
-    }
-
-    strong {
-      font-weight: 600;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spreadsheet Distillery - Updated</title>
+    <meta name="google-site-verification" content="AkbHzkBLBioLsWfVPYy2pxylaUVFfh3q3ojqjv8nn6g" />
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .logo-container {
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            max-height: 80px;
+            max-width: 200px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .email-link {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 50px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .email-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .feature {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #667eea;
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            background: #e8f0fe;
+            color: #1a73e8;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            .logo {
+                max-height: 60px;
+                max-width: 150px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-  <header>
-    <img src="logo.png" alt="Spreadsheet Distillery Logo">
-    <h1>Spreadsheet Insights – No Meetings Required</h1>
-  </header>
-
-  <p>I'm an ex-Amazon analyst offering fast, async insights to help you grow your business.</p>
-  <p><strong>No meetings. Just results.</strong></p>
-
-  <ul>
-    <li>✅ 3 insights + recommendations</li>
-    <li>📈 Delivered in 3 days</li>
-    <li>💸 Flat fee: £99</li>
-  </ul>
-
-  <p>Send your spreadsheet to: <strong>spreadsheetdistillery@gmail.com</strong></p>
-
-  <br>
-
-  <button onclick="window.location.href='https://tally.so/r/mBoMY1'">Get Started</button>
-
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <img src="logo.png" alt="Spreadsheet Distillery Logo" class="logo">
+            </div>
+            <h1>Spreadsheet Distillery</h1>
+            <p class="subtitle">Send Me Your Spreadsheet. Get 3 Actionable Insights.</p>
+            <p>I'm an ex-Amazon analyst offering fast, async insights to help you grow your business.<br>
+            <strong>No meetings. Just results.</strong></p>
+        </div>
+        
+        <div class="cta-box">
+            <p style="margin-bottom: 20px; font-size: 1.1em;">Ready to unlock insights from your data?</p>
+            <p style="margin-bottom: 25px; font-size: 1.3em; font-weight: bold; color: #333;">£99 per analysis</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://tally.so/r/mBoMY1" class="email-link" style="background: #667eea; color: white;">
+                    🚀 Get Started
+                </a>
+                <a href="mailto:spreadsheetdistillery@gmail.com" class="email-link">
+                    📧 Email Direct
+                </a>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>🔒 Secure & Confidential</h3>
+                <p>Your data is encrypted, analyzed securely, and deleted within 30 days.</p>
+            </div>
+            <div class="feature">
+                <h3>⚡ Fast Turnaround</h3>
+                <p>Get your insights delivered within 3-5 business days.</p>
+            </div>
+            <div class="feature">
+                <h3>🎯 Actionable Results</h3>
+                <p>Three specific, implementable recommendations based on your data.</p>
+            </div>
+        </div>
+        
+        <div class="trust-badges">
+            <span class="badge">🛡️ GDPR Compliant</span>
+            <span class="badge">🔐 Secure Processing</span>
+            <span class="badge">📊 Ex-Amazon Analyst</span>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-links">
+                <a href="#privacy-policy">Privacy Policy</a>
+                <a href="#terms-of-service">Terms of Service</a>
+                <a href="#data-security">Data Security</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p style="color: #999; font-size: 0.8em;">
+                © 2025 Spreadsheet Distillery. Professional business analysis services.
+            </p>
+        </div>
+    </div>
+    
+    <!-- Modal containers for policies (hidden by default) -->
+    <div id="privacy-modal" style="display: none;">
+        <!-- Privacy Policy content would go here -->
+    </div>
+    
+    <script>
+        // Simple modal functionality for policy links
+        document.addEventListener('DOMContentLoaded', function() {
+            const policyLinks = document.querySelectorAll('.footer-links a[href^="#"]');
+            
+            policyLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const policy = this.getAttribute('href').substring(1);
+                    
+                    // For now, just alert - you'll replace this with actual modal content
+                    switch(policy) {
+                        case 'privacy-policy':
+                            alert('Privacy Policy modal would open here. Create a separate HTML page or modal.');
+                            break;
+                        case 'terms-of-service':
+                            alert('Terms of Service modal would open here. Create a separate HTML page or modal.');
+                            break;
+                        case 'data-security':
+                            alert('Data Security Policy modal would open here. Create a separate HTML page or modal.');
+                            break;
+                        case 'contact':
+                            window.location.href = 'mailto:spreadsheetdistillery@gmail.com';
+                            break;
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
